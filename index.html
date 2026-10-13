@@ -145,6 +145,14 @@ td code{white-space:nowrap}
   .hero h1{font-size:28px}
 }
 @media print{nav.side,.copy,.toast{display:none}.shell{display:block}.step{break-inside:avoid}}
+.download-card{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:18px 0 0;padding:14px 18px;background:var(--sum-bg);border:1px solid var(--sum-line);border-radius:10px}
+.download-card h4{margin:0 0 2px;font-size:15px;color:var(--sum-ink)}
+.download-card p{margin:0;font-size:14px;color:var(--ink-2)}
+.download-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--focus);color:#fff;font-weight:600;font-size:15px;text-decoration:none;border-radius:8px;white-space:nowrap}
+.download-btn:hover{filter:brightness(1.1)}
+:root[data-theme="dark"] .download-btn{color:#11161C}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .download-btn{color:#11161C}}
+@media print{.download-card{display:none}}
 </style>
 </head>
 <body>
@@ -171,6 +179,13 @@ td code{white-space:nowrap}
       <h1>Build AOR NP V1: standard harness, generative orchestration</h1>
       <p>Six phases take you from an empty environment to a tested agent that registers AOR requests, routes them for sequential approval by amount, emails every party and answers status questions.</p>
       <p>Tick each step as you finish it; ticks are saved in this browser. Every value you need to enter has a copy button and a coloured tag telling you which kind of box it goes into.</p>
+      <div class="download-card">
+        <div>
+          <h4>Build files</h4>
+          <p>Download the files you need for this build as a single zip.</p>
+        </div>
+        <a class="download-btn" href="AOR%20SAMPLES.zip" download>&#11015; Download files (.zip)</a>
+      </div>
       <div class="strip" id="strip"></div>
     </header>
     <div id="phases"></div>
